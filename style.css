@@ -1,0 +1,196 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+header{
+    background-color: #253131;
+    height: 4rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    position: fixed;
+    z-index: 1;
+}
+nav{
+    display: block;
+}
+ul{
+    display: flex;
+    gap: 2rem;
+}
+li{
+    list-style: none;
+    transition: width 1s;
+    cursor: pointer;
+}
+ul a{
+    text-decoration: none;
+    color: #fff;
+}
+li:after {
+    content: '';
+    width: 0px;
+    height: 3px;
+    display: block;
+    background: rgb(255, 255, 255);
+    transition: 300ms;
+}
+li:hover::after{
+    width: 100%;
+}
+.logo{
+    width: 10%;
+    background-color: #4f4f4f;
+    border-radius: 20px;
+}
+.logo-home{
+    height: 30%;
+    border-radius: 20px;
+    animation: floatImage 4s infinite ease-in-out;
+}
+.home{
+    width: 100%;
+    height: 762px;
+    background-color: #415959;
+}
+.h1_synapse,.p_synapse{
+    color: #00a8ec;
+}
+.wrapper{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: row-reverse;
+}
+.content{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #fff;
+    text-align: justify;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    width: 50%;
+    height: 60%;
+}
+.content>h1{
+    font-size: 3rem;
+}
+.content>h1>.secondary,.content>p{
+    font-size: 2rem;
+}
+
+.whoWeAre{
+    height: 762px;
+    background-color: #3a4e4e;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.whoWeAre h1{
+    color: #fff;
+    font-size: 3rem;
+}
+.wrapperW{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-top: 4rem;
+    gap: 5rem;
+}
+.cardsWrapper{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.wrapperW>p{
+    color: #fff;
+    font-size: 1.5rem;
+    width: 50%;
+    margin: 0 auto;
+
+}
+.card2>img,.card>img{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border: 5px solid #00a8ec;
+}
+.card>h1,.card2>h1{
+    background-color: #415959;
+    padding: 0 10px;
+    margin-top: 20px;
+    border-radius: 15px;
+    font-size: 2rem;
+}
+.mais{
+    height: 100%;
+    background-color: #415959;
+    display: flex;
+    flex-direction: column;
+    gap:8rem;
+    align-items: center;
+    color: #fff;
+    font-size: 2rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-top: 4rem;
+}
+.mais>video{
+    margin-bottom: 5%;
+    border-radius: 20px;
+}
+
+@keyframes floatImage{
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(2rem);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+@media screen and (max-width:780px){
+    .wrapper{
+        padding-top: 2rem;
+        flex-direction: column;
+    }
+    .home{
+        height: 1000px;
+    }
+    .content{
+        width: 80%;
+    }
+    .logo-home{
+        height: 25%;
+    }
+}
+@media screen and (max-width:690px){
+    .cardsWrapper{
+        flex-direction: column;
+        gap: 20px;
+    }
+    .whoWeAre{
+        height: 100%;
+        padding-bottom: 2rem;
+    }
+    .whoWeAre p{
+        width: 100%;
+    }
+    video{
+        width: 80%;
+    }
+}
+@media screen and (max-width: 420px){
+    .card>img,.card2>img{
+        width: 80%;
+        height: auto;
+    }
+}
